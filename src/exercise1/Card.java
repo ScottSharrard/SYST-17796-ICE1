@@ -9,6 +9,7 @@ package exercise1;
  * add your name as a modifier.
  * @author dancye
  * @author Paul Bonenfant May 2020
+ * @author Scott Sharrard February 2023
  */
 public class Card {
 
@@ -16,6 +17,24 @@ public class Card {
    private int value;//1-13
 
    public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
+        
+       public Card(int value, int suitValue) {
+           this.value = value;
+           
+       switch (suitValue) {
+           case 1:
+               suit = "hearts";
+               break;
+           case 2:
+               suit = "diamonds";
+               break;
+           case 3:
+               suit = "spades";
+               break;
+           default:
+               suit = "clubs";
+       }
+           }
     /**
      * @return the suit
      */
